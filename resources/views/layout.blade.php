@@ -10,7 +10,6 @@
     <title>La Verdad de México</title>
 </head>
 <body>
-    <h1>holi</h1>
     <header class="site-header {{request()->is('/') ? 'inicio':''}}">
             <div class="contenedor">
                 <div class="barra">
