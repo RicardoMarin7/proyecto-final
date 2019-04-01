@@ -269,6 +269,28 @@ img{
     flex: 0 0 95%;    
 }
 
+/* Apoyo */
+@media(min-width:768px){
+    .apoyo p{
+        text-align: justify;
+    }
+}
+
+/**Donaciones**/
+.imagen-donativo{
+    background-image: url(../../public/img/imagen-donativo.png);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-donaciones{
+    color: $blanco;
+    flex: 0 0 95%;    
+}
+
 /** Footer **/
 .site-footer {
     background-color: $gris;
@@ -291,8 +313,6 @@ img{
     margin: 0;
     color: $blanco;
 }
-
-
 /** Paginas Internas **/
 
 /** Contacto **/

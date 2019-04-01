@@ -288,6 +288,30 @@ img {
   flex: 0 0 95%;
 }
 
+/* Apoyo */
+
+@media (min-width: 768px) {
+  .apoyo p {
+    text-align: justify;
+  }
+}
+
+/**Donaciones**/
+
+.imagen-donativo {
+  background-image: url(/images/imagen-donativo.png?61765cd8a71a3988acf90c8926bd72eb);
+  background-position: center center;
+  background-size: cover;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+}
+
+.contenido-donaciones {
+  color: #ffff;
+  flex: 0 0 95%;
+}
+
 /** Footer **/
 
 .site-footer {

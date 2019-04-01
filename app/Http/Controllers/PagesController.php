@@ -26,4 +26,9 @@ class PagesController extends Controller
         return $request->all();
 
     }
+    
+    public function donaciones(){
+        return view('donaciones');
+    }
+
 }

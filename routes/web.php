@@ -16,3 +16,5 @@ Route::get('/',['as' => 'index', 'uses' => 'PagesController@index']);
 Route::get('contacto',['as' => 'contacto', 'uses' => 'PagesController@contacto']);
 
 Route::post('enviar-mensaje','PagesController@postmsg');
+
+Route::get('donaciones',['as' => 'donaciones','uses' => 'PagesController@donaciones']);

@@ -174,4 +174,37 @@
         </div>
     </section>
 
+    <section class="contenedor seccion apoyo">
+        <h2 class="fw-300 centrar-texto">Apoya nuestro proyecto</h2>
+
+            <p class="centrar-texto">
+                Es un proyecto de integración social,desarrollo económico nacional, de evolución y revolución social.
+    
+                Un proyecto para crear ciudades rurales autosustentables,reconstruir el tejido social y evitar actos delictivos de empresas. Este proyecto se hizo con la finalidad de crear empleos y asi transformar los escenarios de México, hoy devastados por la falta de ingresos en las familias;
+            </p>
+
+        <p class="centrar-texto">
+            Es un proyecto de integración social,desarrollo económico nacional, de evolución y revolución social.
+
+            Un proyecto para crear ciudades rurales autosustentables,reconstruir el tejido social y evitar actos delictivos de empresas. Este proyecto se hizo con la finalidad de crear empleos y asi transformar los escenarios de México, hoy devastados por la falta de ingresos en las familias;
+        </p>
+
+        <h3 class="fw-300 centrar-texto">Puedes apoyarnos haciendo un donativo</h3>
+        <p>
+            Estos fondos seran para formar fideicomisos para los huerfanos fabricados por el crimen organizado. También seran para organizarnos y estructurar el proyecto para obtener la participación de candidaturas independientes así como la participación ciudadana en los legislativos.
+        </p>
+
+        <h4 class="centrar-texto">
+            Este proyecto no puede hacerse realidad sin tu participación. ¡Tu eres muy importante,registrate, participa y coopera! ¡Aporta por un bien nacional!
+        </h4>
+    </section>
+
+    <section class="imagen-donativo">
+            <div class="contenedor contenido-donaciones">
+                <h2>¿Gustas hacer un donativo?</h2>
+                <p>Da click en el botón para realizar un donativo</p>
+                <a href={{ route('donaciones') }} class="boton boton-verde">Donar</a>
+            </div>
+        </section>
+
 @endsection

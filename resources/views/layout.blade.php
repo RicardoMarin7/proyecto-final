@@ -19,7 +19,7 @@
     
                     <nav class="navegacion">
                         <a href="#">Nosotros</a>
-                        <a href="#">Donaciones</a>
+                        <a href={{route('donaciones')}}>Donaciones</a>
                         <a href={{ route('contacto') }}>Contacto</a>
                     </nav>
                 </div><!--Barra-->
@@ -39,7 +39,7 @@
             <nav class="navegacion">
                 <nav class="navegacion">
                     <a href="#">Nosotros</a>
-                    <a href="#">Donaciones</a>
+                    <a href={{ route('donaciones')}}>Donaciones</a>
                     <a href={{ route('contacto') }}>Contacto</a>
                 </nav>
             </nav>
