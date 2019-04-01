@@ -22,6 +22,14 @@
                         <a href={{route('donaciones')}}>Donaciones</a>
                         <a href={{ route('contacto') }}>Contacto</a>
                     </nav>
+                    
+                    <div class="login">
+                        <a href="#">Iniciar Sesión</a>
+                        <p>&nbsp;&nbsp;&nbsp;</p>
+                        <a href="#">Registrarse</a>
+                    </div>
+
+
                 </div><!--Barra-->
                 
                 {!!request()->is('/') ? '<div class="texto-header">

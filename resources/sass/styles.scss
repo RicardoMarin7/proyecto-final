@@ -162,6 +162,15 @@ img{
     }
 }
 
+/** Login **/
+.login{
+    display: flex;
+    align-items: center;
+    border: .1rem;
+    border-style: solid;
+    border-color: transparent;
+}
+
 /** Header Texto **/
 .texto-header {
     color: $blanco;
