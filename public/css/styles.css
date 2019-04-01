@@ -101,6 +101,12 @@ img {
 
 /** Header **/
 
+@media (min-width: 360px) {
+  .site-header h1 {
+    font-size: 4.4rem;
+  }
+}
+
 @media (min-width: 768px) {
   .barra {
     display: flex;
@@ -110,7 +116,7 @@ img {
 }
 
 .site-header {
-  background-color: #333333;
+  background-color: #CE1126;
   padding: 1rem 0 3rem 0;
 }
 
@@ -120,10 +126,6 @@ img {
   background-position: center center;
   background-size: cover;
   height: 60rem;
-}
-
-.site-header {
-  background-color: #CE1126;
 }
 
 .site-header a {
