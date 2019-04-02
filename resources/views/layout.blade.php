@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>La Verdad de México</title>
+    <title>México Merece Un Cambio</title>
 </head>
 <body>
     <header class="site-header {{request()->is('/') ? 'inicio':''}}">

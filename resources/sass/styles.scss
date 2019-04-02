@@ -89,7 +89,7 @@ img{
 /** Header **/
 @media(min-width:360px){
     .site-header h1{
-        font-size: 4.4rem;
+        font-size: 3.0rem;
     }
 }
 
@@ -148,7 +148,7 @@ img{
     .navegacion a{
         display: inline-block;
         margin-right: 2rem;
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
 
     .navegacion a:hover{
@@ -164,11 +164,32 @@ img{
 
 /** Login **/
 .login{
+    font-size: 1.5rem;
     display: flex;
-    align-items: center;
-    border: .1rem;
-    border-style: solid;
+    align-items: center; 
+    justify-content: center;
+    border-bottom: 0.2rem;
+    border-bottom-style: solid;
     border-color: transparent;
+}
+
+
+
+
+
+@media(min-width:769px){
+    .login{
+        font-size: 1.8rem;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .login a:hover{
+    border-bottom: 0.2rem;
+    border-color: $verdebandera;
+    border-bottom-style: solid;
+}
+
 }
 
 /** Header Texto **/
