@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>México Merece Un Cambio</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
                     <nav class="navegacion">
                         <a href="#">Nosotros</a>
                         <a href={{route('donaciones')}}>Donaciones</a>
-                        <a href={{ route('contacto') }}>Contacto</a>
+                        <a href={{ route('messages.create') }}>Contacto</a>
                     </nav>
                     
                     <div class="login">
@@ -48,7 +48,7 @@
                 <nav class="navegacion">
                     <a href="#">Nosotros</a>
                     <a href={{ route('donaciones')}}>Donaciones</a>
-                    <a href={{ route('contacto') }}>Contacto</a>
+                    <a href={{ route('messages.create') }}>Contacto</a>
                 </nav>
             </nav>
             <p class="copyright">Todos Los Derechos Reservados &copy;</p>

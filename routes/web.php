@@ -18,3 +18,7 @@ Route::get('contacto',['as' => 'contacto', 'uses' => 'PagesController@contacto']
 Route::post('enviar-mensaje','PagesController@postmsg');
 
 Route::get('donaciones',['as' => 'donaciones','uses' => 'PagesController@donaciones']);
+
+Route::get('messages/create',['as' => 'messages.create','uses'=> 'MessagesController@create']);
+
+Route::post('messages',['as' => 'messages.store','uses'=> 'MessagesController@store']);
