@@ -168,13 +168,19 @@ img{
     display: flex;
     align-items: center; 
     justify-content: center;
-    border-bottom: 0.2rem;
-    border-bottom-style: solid;
-    border-color: transparent;
 }
 
+.login a{
+    border-bottom: 0.2rem;
+    border-color: transparent;
+    border-bottom-style: solid;
+}
 
-
+.login a:hover{
+    transition: 200ms;
+    transition-property: all;
+    color: $verdebandera;
+}
 
 
 @media(min-width:769px){
@@ -188,6 +194,7 @@ img{
     border-bottom: 0.2rem;
     border-color: $verdebandera;
     border-bottom-style: solid;
+
 }
 
 }

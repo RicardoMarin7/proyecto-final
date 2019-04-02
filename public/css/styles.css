@@ -184,9 +184,18 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.login a {
   border-bottom: 0.2rem;
-  border-bottom-style: solid;
   border-color: transparent;
+  border-bottom-style: solid;
+}
+
+.login a:hover {
+  transition: 200ms;
+  transition-property: all;
+  color: #039164;
 }
 
 @media (min-width: 769px) {

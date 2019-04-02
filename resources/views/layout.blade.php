@@ -33,7 +33,7 @@
                 </div><!--Barra-->
                 
                 {!!request()->is('/') ? '<div class="texto-header">
-                                            <h2 class="no-margin">Una mirada veraz a la situación de nuestro pais</h2>
+                                            <h2 class="no-margin">Una mirada veraz a nuestro paÍs</h2>
                                             <p>Cambiando el rumbo de México</p>
                                            </div>' : ''!!}
             </div><!--Contenedor-->
