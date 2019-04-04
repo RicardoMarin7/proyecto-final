@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Carbon\Carbon;
+use App\Message;
 
 class MessagesController extends Controller
 {
@@ -36,13 +37,9 @@ class MessagesController extends Controller
      */
     public function store(Request $request)
     {
-        DB::table('messages')->insert([
-            "nombre" => $request->input('nombre'),
-            "email" => $request->input('email'),
-            "mensaje" => $request->input('mensaje'),
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now()
-        ]);
+        Message::create($request->all());
+
+        return redirect()->route('index');
     }
 
     /**

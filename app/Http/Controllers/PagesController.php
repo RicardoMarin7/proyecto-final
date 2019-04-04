@@ -11,24 +11,7 @@ class PagesController extends Controller
         return view('index');
     }
 
-    public function contacto(){
-        return view('contacto');
-    }
-
-    public function postmsg(Request $request){
-
-        $this->validate($request,[
-            'nombre' => 'required',
-            'email'  => 'email|required',
-            'mensaje' => 'required|min:20'
-        ]);
-
-        return $request->all();
-
-    }
-    
     public function donaciones(){
         return view('donaciones');
     }
-
 }
