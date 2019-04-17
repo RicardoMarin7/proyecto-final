@@ -170,7 +170,7 @@
         <div class="contenedor contenido-contacto">
             <h2>Contactanos</h2>
             <p>Si estas interesado por el proyecto o tienes alguna opinión o sugerencia llena este formulario.</p>
-            <a href={{ route('contacto') }} class="boton boton-rojo">Contactanos</a>
+            <a href={{ route('messages.create') }} class="boton boton-rojo">Contactanos</a>
         </div>
     </section>
 

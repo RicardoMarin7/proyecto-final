@@ -1,10 +1,11 @@
 @extends('layout')
 @section('contenido')
 
-<h1 class="fw-300 centrar-texto">Contacto</h1>
+
 
 <main class="contenedor seccion contenido-centrado">
-    <h2 class="fw-300 centrar-texto">Llena el formulario de contacto</h2>
+    <h1 class="fw-300 centrar-texto no-margin">Contacto</h1>
+    <h2 class="fw-300 centrar-texto no-margin">Llena el formulario de contacto</h2>
     
     
 

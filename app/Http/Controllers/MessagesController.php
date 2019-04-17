@@ -37,6 +37,13 @@ class MessagesController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->validate($request, [
+            'nombre' =>'required',
+            'email' => 'required|email',
+            'mensaje' => 'required|min:10'
+        ]);
+
         Message::create($request->all());
 
         return redirect()->route('index');
