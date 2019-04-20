@@ -49,6 +49,11 @@ h4 {
   margin: 0 auto;
 }
 
+.form-pequeño {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
 }
@@ -196,6 +201,10 @@ img {
   transition: 200ms;
   transition-property: all;
   color: #039164;
+}
+
+.login p {
+  color: #ffff;
 }
 
 @media (min-width: 769px) {
@@ -415,5 +424,46 @@ textarea {
 
 .error {
   color: #CE1126;
+}
+
+/* Pagina Inicio de Sesión */
+
+.inicio-registro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inicio-registro a {
+  color: #0033A0;
+}
+
+/* Pagina Donaciones */
+
+@media (min-width: 768px) {
+  .contenido-donativo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+
+  .contenido-donativo p {
+    text-align: left;
+  }
+}
+
+.texto-donativo blockquote {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem 0 3rem 0;
+}
+
+.p-donativo {
+  text-align: center;
+}
+
+.p-donativo p {
+  font-weight: 900;
 }
 

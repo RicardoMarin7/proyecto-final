@@ -22,12 +22,23 @@
                         <a href={{route('donaciones')}}>Donaciones</a>
                         <a href={{ route('messages.create') }}>Contacto</a>
                     </nav>
+                         
+                    @if (Auth::check())
+                        <div class="login">
+                            <p>Bienvenido/a {{auth()->user()->name}}</p>
+                        </div>
+                        <form method="POST" action="{{ route('logout')}}">
+                            {{ csrf_field() }}                                            
+                            <input type="submit" value="Cerrar Sesión" class="boton">
+                        </form>
+                    @else
+                        <div class="login">
+                            <a href={{ route('login') }}>Iniciar Sesión</a>
+                            <p>&nbsp;&nbsp;&nbsp;</p>
+                            <a href={{ route('register') }}>Registrarse</a>
+                        </div>
+                    @endif
                     
-                    <div class="login">
-                        <a href="#">Iniciar Sesión</a>
-                        <p>&nbsp;&nbsp;&nbsp;</p>
-                        <a href="#">Registrarse</a>
-                    </div>
 
 
                 </div><!--Barra-->
@@ -36,6 +47,8 @@
                                             <h2 class="no-margin">Una mirada veraz a nuestro paÍs</h2>
                                             <p>Cambiando el rumbo de México</p>
                                            </div>' : ''!!}
+
+    
             </div><!--Contenedor-->
     </header>
 

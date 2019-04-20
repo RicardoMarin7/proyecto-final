@@ -6,6 +6,7 @@ $negro:#111;
 $otrogris:#4f4f4f;
 $grismasclaro:#B5B5B5;
 $grissuperclaro:#F5F5F5;
+$azul: #0033A0;
 
 
 
@@ -35,6 +36,11 @@ h1{font-size: 4.8rem;}  h2{font-size: 4rem;} h3{font-size: 3.2rem;} h4{font-size
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
+}
+
+.form-pequeño{
+    max-width: 60rem;
+    margin: 0 auto; 
 }
 
 img{
@@ -180,6 +186,10 @@ img{
     transition: 200ms;
     transition-property: all;
     color: $verdebandera;
+}
+
+.login p{
+    color: $blanco;
 }
 
 
@@ -396,5 +406,59 @@ textarea{
     color:$rojobandera;
 }
 
+/* Pagina Inicio de Sesión */
+
+.inicio-registro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.inicio-registro a{
+    color:$azul;
+}
+
+@media (min-width: 768px){
+    .inicio-registro{
+        
+    }
+        
+}
+
 
 /* Pagina Donaciones */
+
+@media (min-width: 768px) {
+    .contenido-donativo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+
+    .contenido-donativo p{
+        text-align: left;
+    }
+
+    .p-donativo{
+
+    }
+}
+
+
+
+.texto-donativo blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+.p-donativo {
+    text-align: center;
+}
+
+.p-donativo p{
+    font-weight: 900;
+    
+}
