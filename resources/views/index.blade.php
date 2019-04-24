@@ -91,7 +91,7 @@
     </section>-->
 
     <main class="seccion contenedor">
-        <h2 class="fw-300 centrar-texto">¿Quieres participar para cambiar a México a profundidad y sin violencia</h2>
+        <h2 class="fw-300 centrar-texto">¿Quieres participar para cambiar a México a profundidad y sin violencia?</h2>
         <p>
                 ¡Te invitamos a ser el eje del cambio, sé parte de esta transformación, enciende tú llama, tú luz y conviértela en acción! Te invitamos a  que tomemos, nosotros los ciudadanos en nuestras manos el camino que debe seguir México.
         </p>
@@ -170,7 +170,7 @@
         <div class="contenedor contenido-contacto">
             <h2>Contactanos</h2>
             <p>Si estas interesado por el proyecto o tienes alguna opinión o sugerencia llena este formulario.</p>
-            <a href={{ route('messages.create') }} class="boton boton-rojo">Contactanos</a>
+            <a href={{ route('messages.create') }} class="boton boton-rojo d-block">Contactanos</a>
         </div>
     </section>
 
@@ -203,7 +203,7 @@
             <div class="contenedor contenido-donaciones">
                 <h2>¿Gustas hacer un donativo?</h2>
                 <p>Da click en el botón para realizar un donativo</p>
-                <a href={{ route('donaciones') }} class="boton boton-verde">Donar</a>
+                <a href={{ route('donaciones') }} class="boton boton-verde d-block">Donar</a>
             </div>
         </section>
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>México Merece Un Cambio</title>
+    <script type="module" src="/js/all.js"></script>
 </head>
 <body>
     <header class="site-header {{request()->is('/') ? 'inicio':''}}">
@@ -16,33 +17,47 @@
                     <a href="/">
                         <h1 class="no-margin">LaVerdad<span>DeMéxico</span></h1>
                     </a>
-    
-                    <nav class="navegacion">
-                        <a href="#">Nosotros</a>
-                        <a href={{route('donaciones')}}>Donaciones</a>
-                        <a href={{ route('messages.create') }}>Contacto</a>
-                    </nav>
-                         
-                    @if (Auth::check())
-                        <div class="login">
-                            <p>Bienvenido/a {{auth()->user()->name}}</p>
-                        </div>
-                        <form method="POST" action="{{ route('logout')}}">
-                            {{ csrf_field() }}                                            
-                            <input type="submit" value="Cerrar Sesión" class="boton">
-                        </form>
-                    @else
-                        <div class="login">
-                            <a href={{ route('login') }}>Iniciar Sesión</a>
-                            <p>&nbsp;&nbsp;&nbsp;</p>
-                            <a href={{ route('register') }}>Registrarse</a>
-                        </div>
-                    @endif
                     
-
+                    <div class="contenedor-navegacion">
+                        <nav class="navbar navbar-expand-sm navbar-dark navegacion">
+                            <button class="navbar-toggler d-lg-none bg-none" type="button" data-toggle="collapse"                         data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon custom-toggler"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item">
+                                        <a class="nav-link" href={{route('donaciones')}}>Donaciones<span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href={{ route('messages.create')}}>Contacto</a>
+                                    </li>
+                                    @if (Auth::check())
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{auth()->user()->name}}</a>
+                                            <div class="dropdown-menu {{request()->is('/') ? 'bg-none':'bg-red'}}" aria-labelledby="dropdownId">
+                                                <a class="dropdown-item" href="#">Mis Compras</a>
+                                                <a class="dropdown-item" href={{ route('logout')}}>Cerrar Sesión</a>
+                                            </div>
+                                        </li>    
+                                    @else
+                                        <li class="nav-item">
+                                            <a class="nav-link" href={{ route('login')}}>Iniciar Sesión</a>
+                                        </li>
+                                        <li class="nav-item">                                
+                                            <a class="nav-link" href={{ route('register')}}>Registrarse</a>
+                                        </li>
+                                    @endif
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
 
                 </div><!--Barra-->
-                
+
+
+
                 {!!request()->is('/') ? '<div class="texto-header">
                                             <h2 class="no-margin">Una mirada veraz a nuestro paÍs</h2>
                                             <p>Cambiando el rumbo de México</p>
@@ -57,16 +72,16 @@
 
 <footer class="site-footer">
         <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <nav class="navegacion">
-                    <a href="#">Nosotros</a>
-                    <a href={{ route('donaciones')}}>Donaciones</a>
-                    <a href={{ route('messages.create') }}>Contacto</a>
-                </nav>
-            </nav>
-            <p class="copyright">Todos Los Derechos Reservados &copy;</p>
+            <ul class="nav justify-content-center navegacion">
+                <li class="nav-item">
+                    <a class="nav-link" href={{route('donaciones')}}>Donaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={{ route('messages.create')}}>Contacto</a>
+                </li>
+            </ul>
+            <p>Todos los derechos reservados. &COPY;</p>
         </div>
     </footer>
-
 </body>
 </html>

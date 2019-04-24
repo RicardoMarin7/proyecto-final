@@ -25,4 +25,4 @@ Route::get('register',['as'=>'register','uses' => 'Auth\RegisterController@ShowR
 
 Route::post('register','Auth\RegisterController@register');
 
-Route::post('logout','Auth\LoginController@logout')->name('logout');
+Route::get('logout','Auth\LoginController@logout')->name('logout');

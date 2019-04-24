@@ -39,9 +39,9 @@ class MessagesController extends Controller
     {
 
         $this->validate($request, [
-            'nombre' =>'required',
-            'email' => 'required|email',
-            'mensaje' => 'required|min:10'
+            'nombre' =>'required|string',
+            'email' => 'required|email|string',
+            'mensaje' => 'required|min:10|max:500|string'
         ]);
 
         Message::create($request->all());

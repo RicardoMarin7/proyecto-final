@@ -27,8 +27,9 @@
             <textarea name="mensaje" class="mensajes" placeholder="Tu opinion o sugerencia" required>{{old('mensaje')}}</textarea>
             
             </label>
+            <input type="submit" value="Enviar" class="boton boton-verde d-block">
         </fieldset>
-        <input type="submit" value="Enviar" class="boton boton-verde">
+
     </form>
 </main>
     

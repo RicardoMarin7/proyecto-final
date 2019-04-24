@@ -31,3 +31,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+
+//Menu Responsive
+
+$('.menu-movil').on('click', function(){
+    $('.navegacion').slideToggle();        
+});
