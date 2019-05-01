@@ -4,19 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Mail;
 use Carbon\Carbon;
 use App\Message;
 
 class MessagesController extends Controller
-{
+{   
+
+    function __construct(){
+        $this->middleware(['auth','roles:admin'])->except(['create','store']);
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $messages = DB::table('messages')->get();
+        return view('messages.index',compact('messages'));
     }
 
     /**
@@ -39,10 +45,14 @@ class MessagesController extends Controller
     {
 
         $this->validate($request, [
-            'nombre' =>'required|string',
+            'nombre' =>'required|string|alpha',
             'email' => 'required|email|string',
             'mensaje' => 'required|min:10|max:500|string'
         ]);
+
+        Mail::send('emails.contact',['msg'=>$request],function($m) use ($request){
+            $m->to($request->email,$request->name)->subject('Hemos recibido tu mensaje');
+        });
 
         Message::create($request->all());
 

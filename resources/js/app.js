@@ -34,6 +34,6 @@ const app = new Vue({
 
 //Menu Responsive
 
-$('.menu-movil').on('click', function(){
-    $('.navegacion').slideToggle();        
-});
+$(document).ready(function() {
+    $('#tabla-mensajes').DataTable();
+} );

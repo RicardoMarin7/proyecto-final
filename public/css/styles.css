@@ -10656,8 +10656,8 @@ a.text-dark:focus {
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
+  box-sizing: border-box !important;
+  font-size: 62.5% !important;
 }
 
 *,
@@ -10737,8 +10737,8 @@ ul {
 }
 
 .seccion {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .d-block {
@@ -11117,5 +11117,5 @@ textarea {
   font-weight: 900;
 }
 
-/** Prueba Dropdown **/
+/** Pagina Libros **/
 

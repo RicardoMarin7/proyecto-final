@@ -9,44 +9,54 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>México Merece Un Cambio</title>
     <script type="module" src="/js/all.js"></script>
+    
 </head>
 <body>
     <header class="site-header {{request()->is('/') ? 'inicio':''}}">
             <div class="contenedor">
                 <div class="barra">
                     <a href="/">
-                        <h1 class="no-margin">LaVerdad<span>DeMéxico</span></h1>
+                        <h1 class="no-margin">MéxicoMerece<span>UnCambio</span></h1>
                     </a>
                     
                     <div class="contenedor-navegacion">
                         <nav class="navbar navbar-expand-sm navbar-dark navegacion">
-                            <button class="navbar-toggler d-lg-none bg-none" type="button" data-toggle="collapse"                         data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler d-lg-none bg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"                                aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon custom-toggler"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="collapsibleNavId">
                                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                                <li class="nav-item">
-                                        <a class="nav-link" href={{route('donaciones')}}>Donaciones<span class="sr-only">(current)</span></a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href={{ route('libros')}}>Libros</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href={{ route('messages.create')}}>Contacto</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                            <a class="nav-link" href={{route('donaciones')}}>Donaciones<span class="sr-only">(current)</span></a>
                                     </li>
                                     @if (Auth::check())
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{auth()->user()->name}}</a>
                                             <div class="dropdown-menu {{request()->is('/') ? 'bg-none':'bg-red'}}" aria-labelledby="dropdownId">
-                                                <a class="dropdown-item" href="#">Mis Compras</a>
+                                                @if (auth()->user()->hasRoles(['admin']))
+                                                    <a class="dropdown-item" href={{ route('messages.index') }}>Mensajes</a>                                                     
+                                                @else
+                                                    <a class="dropdown-item" href="#">Mis Compras</a>
+                                                @endif                             
                                                 <a class="dropdown-item" href={{ route('logout')}}>Cerrar Sesión</a>
                                             </div>
                                         </li>    
                                     @else
-                                        <li class="nav-item">
-                                            <a class="nav-link" href={{ route('login')}}>Iniciar Sesión</a>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acceder</a>
+                                            <div class="dropdown-menu {{request()->is('/') ? 'bg-none':'bg-red'}}" aria-labelledby="dropdownId">
+                                                <a class="dropdown-item" href={{ route('login')}}>Iniciar Sesión</a>        
+                                                <a class="dropdown-item" href={{ route('register')}}>Registrarse</a>
+                                            </div>
                                         </li>
-                                        <li class="nav-item">                                
-                                            <a class="nav-link" href={{ route('register')}}>Registrarse</a>
-                                        </li>
+
                                     @endif
                                     
                                 </ul>
@@ -74,10 +84,10 @@
         <div class="contenedor contenedor-footer">
             <ul class="nav justify-content-center navegacion">
                 <li class="nav-item">
-                    <a class="nav-link" href={{route('donaciones')}}>Donaciones</a>
+                    <a class="nav-link" href={{ route('messages.create')}}>Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={{ route('messages.create')}}>Contacto</a>
+                    <a class="nav-link" href={{route('donaciones')}}>Donaciones</a>
                 </li>
             </ul>
             <p>Todos los derechos reservados. &COPY;</p>

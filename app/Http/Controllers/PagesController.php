@@ -8,10 +8,14 @@ class PagesController extends Controller
 {
    
     public function index(){
-        return view('index');
+        return view('home');
     }
 
     public function donaciones(){
         return view('donaciones');
+    }
+
+    public function libros(){
+        return view('libros');
     }
 }

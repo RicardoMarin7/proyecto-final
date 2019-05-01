@@ -8,8 +8,7 @@
     <form method="POST" action="{{ route('login')}}" class="form-pequeño">
         {{ csrf_field() }}
         <fieldset>
-            <legend>Formulario de Inicio de Sesión</legend>
-            
+                        
             <label for="email">E-mail: {!!$errors->first('email','<span class=error>:message</span>')!!}
             <input type="email" name="email" placeholder="Tu Correo Electrónico" required value="{{old('email')}}">
             </label>
@@ -20,7 +19,7 @@
             
             <div class="inicio-registro">
                 <a href={{ route('register')}}>Registrarse</a>
-                <a href="#">¿Has olvidado tu contraseña?</a>
+                <a href={{route('password.forgot')}}>¿Has olvidado tu contraseña?</a>
             </div>
             
         </fieldset>

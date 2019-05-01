@@ -12,7 +12,6 @@
     <form method="POST" action="{{ route('messages.store')}}">
         {{ csrf_field() }}
         <fieldset>
-            <legend>Formulario de Contacto</legend>
 
             <label for="nombre">Nombre: {!!$errors->first('nombre','<span class=error>:message</span>')!!}
             <input type="text"  name=nombre placeholder="Tu Nombre" required value="{{old('nombre')}}">

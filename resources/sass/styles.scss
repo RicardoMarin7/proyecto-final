@@ -11,8 +11,8 @@ $azul: #0033A0;
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5% // 1rem = 10 px;
+    box-sizing: border-box !important;
+    font-size: 62.5% !important; // 1rem = 10 px;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -42,7 +42,7 @@ a:hover{
 
 .form-pequeño{
     max-width: 60rem;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 img{
@@ -68,8 +68,8 @@ ul {
 }
 
 .seccion {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .d-block {
@@ -456,5 +456,4 @@ textarea{
     
 }
 
-
-/** Prueba Dropdown **/
+/** Pagina Libros **/

@@ -114,6 +114,7 @@
 
         <p>Los ciudadanos deben supervisar todas y cada una de las instituciones en todos los niveles.</p>
         <h4 class="h4-main">!Quién no cumpla y tenga sucio proceder, se debe evidenciar y ponerlo frente a la ley justa!</h3>
+            <br>
 
         <h3 class="fw-300 centrar-texto">¿Estás interesado en participar? </h3>
         <p>

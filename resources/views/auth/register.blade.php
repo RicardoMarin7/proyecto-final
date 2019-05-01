@@ -8,10 +8,13 @@
     <form method="POST" action="{{ route('register')}}" class="form-pequeño">
         {{ csrf_field() }}
         <fieldset>
-            <legend>Formulario de Registro</legend>
-
+            
             <label for="name">Nombre {!!$errors->first('name','<span class=error>:message</span>')!!}
             <input type="text" name="name" placeholder="Tu Nombre" required value="{{old('name')}}">
+            </label>
+
+            <label for="surname">Apellido {!!$errors->first('surname','<span class=error>:message</span>')!!}
+                <input type="text" name="surname" placeholder="Tu Apellido" required value="{{old('surname')}}">
             </label>
         
             <label for="email">E-mail: {!!$errors->first('email','<span class=error>:message</span>')!!}
@@ -23,7 +26,7 @@
             </label>
 
             <label for="password_confirmation">Confirme su contraseña: {!!$errors->first('password','<span class=error>:message</span>')!!}
-            <input type="password_confirmation" name="password_confirmation" placeholder="Introduzca de nuevo su contraseña">
+            <input type="password" name="password_confirmation" placeholder="Introduzca de nuevo su contraseña">
             </label>
             
             <div class="inicio-registro">
