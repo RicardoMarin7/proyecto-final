@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Auth\Notifications\ResetPassword;
+use App\Notifications\MyResetPassword;
 
 class User extends Authenticatable
 {
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','surname','role_id',
+        'name', 'email', 'password','surname',
     ];
 
     /**
@@ -25,7 +27,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','role_id',
     ];
 
     /**
@@ -48,6 +50,11 @@ class User extends Authenticatable
             }
         }
         return false;
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new MyResetPassword($token));
     }
 
 }
